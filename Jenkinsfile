@@ -76,7 +76,7 @@ agent any
             sh '''
             docker rm -f calculator-deploy || true 
             #docker run -d --name occ-deploy -p 8082:80 -v $(pwd)/build:/usr/local/apache2/htdocs/occ-to-react -v $(pwd)/node_modules:/usr/local/apache2/htdocs/occ-to-react/node_modules httpd:2.4 
-            docker run -d --name calculator-deploy -p 8082:80 -v $(pwd)/build:/usr/local/apache2/htdocs/ -v $(pwd)/node_modules:/usr/local/apache2/htdocs/node_modules httpd:2.4 
+            docker run -d --name calculator-deploy -p 8083:80 -v $(pwd)/build:/usr/local/apache2/htdocs/ -v $(pwd)/node_modules:/usr/local/apache2/htdocs/node_modules httpd:2.4 
 
             #docker exec -id occ_deploy_httpd systemctl restart httpd
             '''
